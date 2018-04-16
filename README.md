@@ -34,9 +34,9 @@ You can create a postgresql superuser at launch by specifying `DB_USER` and
 `DB_PASS` variables. You may also create a database by using `DB_NAME`.
 
     docker run --name postgresql -d \
-    -e 'DB_USER=username' \
-    -e 'DB_PASS=ridiculously-complex_password1' \
-    -e 'DB_NAME=my_database' \
+    -e 'POSTGRES_USER=pg_admin' \
+    -e 'POSTGRES_PASSWORD=pg_admin' \
+    -e 'POSTGRES_DB=pg_admin' \
     tntim96/postgresql-postgis:9.2
 
 To connect to your database with your newly created user:
