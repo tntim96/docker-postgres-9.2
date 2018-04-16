@@ -4,7 +4,7 @@
 
 # PGVERSION is the full package version, e.g., 9.0.2
 # Note: the specfile inserts the correct value during package build
-PGVERSION=9.2.7
+PGVERSION=9.2.23
 
 # PGENGINE is the directory containing the postmaster executable
 # Note: the specfile inserts the correct value during package build

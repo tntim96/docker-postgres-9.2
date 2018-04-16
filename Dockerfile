@@ -1,15 +1,12 @@
-# "ported" by Adam Miller <maxamillion@fedoraproject.org> from
-#   https://github.com/fedora-cloud/Fedora-Dockerfiles
-#
-# Originally written for Fedora-Dockerfiles by
-#   scollier <scollier@redhat.com>
+# Initial commit from
+# https://github.com/CentOS/CentOS-Dockerfiles/tree/master/postgres/centos7
 
 FROM centos:centos7
-MAINTAINER The CentOS Project <cloud-ops@centos.org>
+MAINTAINER tntim96 <tntim96@gmail.com>
 
 RUN yum -y update; yum clean all
 RUN yum -y install sudo epel-release; yum clean all
-RUN yum -y install postgresql-server postgresql postgresql-contrib supervisor pwgen; yum clean all
+RUN yum -y install postgresql-server postgresql postgresql-contrib postgis supervisor pwgen; yum clean all
 
 ADD ./postgresql-setup /usr/bin/postgresql-setup
 ADD ./supervisord.conf /etc/supervisord.conf
