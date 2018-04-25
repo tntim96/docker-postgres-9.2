@@ -10,7 +10,7 @@ Setup
 
 To build the image
 
-    # docker build --rm -t tntim96/postgresql-postgis:9.2 .
+    # docker build --rm -t tntim96/postgresql-postgis-no-volume:9.2 .
 
 
 Launching PostgreSQL
@@ -18,12 +18,12 @@ Launching PostgreSQL
 
 #### Quick Start (not recommended for production use)
 
-    docker run --name=postgresql -d -p 5432:5432 tntim96/postgresql-postgis
+    docker run --name=postgresql -d -p 5432:5432 tntim96/postgresql-postgis-no-volume
 
 
 To connect to the container as the administrative `postgres` user:
 
-    docker run -it --rm --volumes-from=postgresql tntim96/postgresql-postgis:9.2 sudo -u
+    docker run -it --rm --volumes-from=postgresql tntim96/postgresql-postgis-no-volume:9.2 sudo -u
     postgres -H psql
 
 
@@ -37,7 +37,7 @@ You can create a postgresql superuser at launch by specifying `DB_USER` and
     -e 'POSTGRES_USER=pg_admin' \
     -e 'POSTGRES_PASSWORD=pg_admin' \
     -e 'POSTGRES_DB=pg_admin' \
-    tntim96/postgresql-postgis:9.2
+    tntim96/postgresql-postgis-no-volume:9.2
 
 To connect to your database with your newly created user:
 
