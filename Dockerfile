@@ -2,7 +2,7 @@
 # https://github.com/CentOS/CentOS-Dockerfiles/tree/master/postgres/centos7
 
 FROM centos:centos7
-MAINTAINER tntim96 <tntim96@gmail.com>
+LABEL maintainer="tntim96@gmail.com"
 
 RUN yum -y update; yum clean all
 RUN yum -y install sudo epel-release; yum clean all
