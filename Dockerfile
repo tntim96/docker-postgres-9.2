@@ -25,6 +25,8 @@ RUN chown -v postgres.postgres /var/lib/pgsql/data/postgresql.conf
 
 RUN echo "host    all             all             0.0.0.0/0               md5" >> /var/lib/pgsql/data/pg_hba.conf
 
+VOLUME ["/var/lib/pgsql"]
+
 EXPOSE 5432
 
 CMD ["/bin/bash", "/start_postgres.sh"]
